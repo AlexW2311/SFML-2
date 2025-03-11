@@ -12,12 +12,27 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(main
- src/main.cpp
- class/fontManager.cpp
- class/renderer.cpp
- header/fontManager.hpp
- header/renderer.hpp
+# Add source files and headers
+set(SOURCE_FILES
+    src/main.cpp
+    class/fontManager.cpp
+    class/renderer.cpp
 )
+
+set(HEADER_FILES
+    header/fontManager.hpp
+    header/renderer.hpp
+)
+
+add_executable(main ${SOURCE_FILES} ${HEADER_FILES})
+
 target_compile_features(main PRIVATE cxx_std_17)
 target_link_libraries(main PRIVATE SFML::Graphics)
+
+
+# Group source files in Xcode
+source_group("Source Files\\src" FILES src/main.cpp)
+source_group("Source Files\\class" FILES class/fontManager.cpp class/renderer.cpp)
+
+# Group header files in Xcode
+source_group("Header Files\\header" FILES header/fontManager.hpp header/renderer.hpp)
