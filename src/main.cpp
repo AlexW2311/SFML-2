@@ -27,6 +27,8 @@ int main()
     //text2.setPosition(100f);
     //New line here to test the new branch things
     
+    //add a new comment to prove a new branch created locally
+    
     Renderer renderer;
     renderer.addDrawable(text);
     renderer.addDrawable(text2);
