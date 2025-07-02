@@ -24,6 +24,7 @@ set(HEADER_FILES
     header/renderer.hpp
 )
 
+
 add_executable(main ${SOURCE_FILES} ${HEADER_FILES})
 
 target_compile_features(main PRIVATE cxx_std_17)

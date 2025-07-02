@@ -20,8 +20,15 @@ int main()
     // set the color
     text.setFillColor(sf::Color::Red);
     
+    sf::Text text2(fontManager.getFont("OpenSans"));
+    text2.setString("Second text below");
+    text2.setCharacterSize(24);
+    text2.setFillColor(sf::Color::Blue);
+    //text2.setPosition(100f);
+    
     Renderer renderer;
     renderer.addDrawable(text);
+    renderer.addDrawable(text2);
 
     //Create window
     auto window = sf::RenderWindow(sf::VideoMode({800u, 600u}), "CMake SFML Project");
