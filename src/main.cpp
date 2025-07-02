@@ -25,6 +25,7 @@ int main()
     text2.setCharacterSize(24);
     text2.setFillColor(sf::Color::Blue);
     //text2.setPosition(100f);
+    //New line here to test the new branch things
     
     Renderer renderer;
     renderer.addDrawable(text);
